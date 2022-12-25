@@ -1,42 +1,27 @@
 name : github-actions-workflow
-
 run-name : github-actions-runname
 
-on :
-  
+on :  
   push : 
     branches :
     - master
-  
   workflow_dispatch :
 
 env :
-  
   name : Rajesh 
 
 jobs :
-  
-  checking-context-values :
+
+  checking-context-values :    
     
-    runs-on : ubuntu-latest
+    strategy :
+      matrix :
+        version : [ ubuntu-latest , windows-latest ]
+        
+    runs-on : ${{ matrix.version }}
     
     steps :
-      
     - name : Checking out the Repository
       uses : actions/checkout@v3
-      
     - name : Printing the environment value
       run :  echo " my name is $name "
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
