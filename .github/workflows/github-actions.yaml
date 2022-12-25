@@ -26,3 +26,18 @@ jobs :
     - name : Printing the environment value
       run :  echo " my name is $name "
       shell : bash
+    - name : Printing Github Contexts 
+      run : |
+            echo ${{ toJson(github)   }}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
