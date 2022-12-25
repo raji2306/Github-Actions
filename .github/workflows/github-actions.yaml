@@ -28,7 +28,7 @@ jobs :
       shell : bash
     - name : Printing Github Contexts 
       run : |
-            echo ${{ toJson(github.ref)   }}
+            echo ${{ toJson(github.*)   }}
     
     
     
