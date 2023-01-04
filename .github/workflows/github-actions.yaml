@@ -28,7 +28,7 @@ jobs :
       shell : bash
     - name : Printing Github Contexts 
       run : |
-            echo $GITHUB_TOKEN
+            echo ${{ secrets.GITHUB_TOKEN }}
             echo ${{ toJson(github.ref)   }}
             echo ${{ secrets.GITHUB_TOKEN }} 
     
