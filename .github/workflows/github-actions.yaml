@@ -23,7 +23,7 @@ on :
 jobs :
  build-stage :
  
-  runs-on : my-runner
+  runs-on : self-hosted
   
   outputs:
     output1: ${{ steps.contents.outputs.test }}
