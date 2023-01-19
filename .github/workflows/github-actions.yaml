@@ -64,7 +64,7 @@ jobs :
     uses: actions/upload-artifact@v3
     with:
         name: myArtifacts
-        path : ~/java-hello-world-with-maven
+        path : ~/github-hosting
         retention-days: 1
         
   - name : Checker
