@@ -25,12 +25,12 @@ jobs :
  
   runs-on : self-hosted
   
-  outputs:
-    output1: ${{ steps.contents.outputs.test }}
-  
-  env : |
+  env :
         name : 'Rajesh'
         role : 'DevOps Engineer'
+  
+  outputs:
+    output1: ${{ steps.contents.outputs.test }}
         
   strategy :
     matrix :
