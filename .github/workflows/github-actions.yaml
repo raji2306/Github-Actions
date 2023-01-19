@@ -34,8 +34,8 @@ jobs :
         
   strategy :
     matrix :
-      version : [ 1.8 ]
-      maven : [ 3.8.2 ]
+      version : [ 11 ]
+      maven : [ 3.8.1 ]
       
   steps :
   - name : Checkout Stage
