@@ -29,8 +29,8 @@ jobs :
     output1: ${{ steps.contents.outputs.test }}
   
   env : |
-        name : Rajesh
-        role : DevOps Engineer
+        name : 'Rajesh'
+        role : 'DevOps Engineer'
         
   strategy :
     matrix :
