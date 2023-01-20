@@ -17,8 +17,8 @@ on :
     - master
   workflow_dispatch :
   status :
-  schedule :
-  - cron : '*/20 * * * *'
+#   schedule :
+#   - cron : '*/20 * * * *'
   
 jobs :
  build-stage :
