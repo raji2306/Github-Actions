@@ -87,7 +87,7 @@ jobs :
  checking-out-value :
 
     runs-on : self-hosted
-    if : ${{ job.status == 'success' }}
+    if: ${{ success() }}
     needs : build-stage
     steps : 
     
