@@ -53,6 +53,14 @@ jobs :
       
   - name: Build project with Maven
     run: mvn -B package --file pom.xml
+    
+  - name : Printing important Environment and Context
+    run : |
+          echo $GITHUB_API_URL	
+          echo $GITHUB_ACTOR	
+          echo $GITHUB_ACTION
+          echo $GITHUB_ACTION_REPOSITORY	
+          echo $GITHUB_PATH
 
   - name: Cache local Maven repository
     uses: actions/cache@v2
@@ -64,7 +72,7 @@ jobs :
     uses: actions/upload-artifact@v3
     with:
         name: myArtifacts
-        path : ~/github-hosting
+        path : ~/Github-Actions
         retention-days: 1
         
   - name : Checker
@@ -76,10 +84,15 @@ jobs :
     run : |
           echo "::set-output name=test::vitty"
   
-        
-        
-        
-        
+ checking-out-value :
+
+    runs-on : self-hosted
+    needs : build-stage
+    steps : 
+    
+    - name : Printing values from other Jobs
+      run : |
+            echo ${{ needs.build-stage.outputs.output1 }}
         
         
         
