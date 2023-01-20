@@ -101,7 +101,7 @@ jobs :
   steps :
   
   - name : Running Shell Script
-    run : ./shelly.sh
+    run : sh /home/ubuntu/shelly.sh
     shell : bash
         
         
