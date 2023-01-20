@@ -97,12 +97,16 @@ jobs :
           
  Running-shell :
   runs-on : self-hosted
-  
+  defaults :
+    run :
+        working-directory : /home/ubuntu/
+        shell : bash
   steps :
   
   - name : Running Shell Script
-    run : sh /home/ubuntu/shelly.sh
-    shell : bash
+    run : |
+          sh /home/ubuntu/shelly.sh
+          ls -lrt > output.txt 
         
         
         
