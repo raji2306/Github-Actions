@@ -94,6 +94,15 @@ jobs :
     - name : Printing values from other Jobs
       run : |
             echo ${{ needs.build-stage.outputs.output1 }}
+          
+ Running-shell :
+  runs-on : self-hosted
+  
+  steps :
+  
+  - name : Running Shell Script
+    run : sudo ./home/ubuntu/shelly.sh
+    shell : bash
         
         
         
