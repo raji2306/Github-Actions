@@ -66,7 +66,7 @@ jobs :
     uses: actions/cache@v2
     with:
       path: ~/.m2/repository
-      key: ${{ runner.name }}-maven
+      key: ${{ runner.name }}-maven-${{ hashFiles('**/pom.xml') }}
       
   - name: Storing artifacts
     uses: actions/upload-artifact@v3
