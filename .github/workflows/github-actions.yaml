@@ -23,7 +23,7 @@ on :
 jobs :
  build-stage :
  
-  runs-on : self
+  runs-on : self-hosted
   
   env :
         name : 'Rajesh'
