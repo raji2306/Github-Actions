@@ -61,6 +61,7 @@ jobs :
           echo $GITHUB_ACTION
           echo $GITHUB_ACTION_REPOSITORY	
           echo $GITHUB_PATH
+          echo ${{ github. run_id }}
 
   - name: Cache local Maven repository
     uses: actions/cache@v2
