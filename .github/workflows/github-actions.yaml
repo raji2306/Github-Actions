@@ -23,7 +23,7 @@ on :
 jobs :
  build-stage :
  
-  runs-on : self-hosted
+  runs-on : ubuntu-latest
   
   env :
         name : 'Rajesh'
