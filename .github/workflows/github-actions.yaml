@@ -75,38 +75,38 @@ jobs :
         path : /home/ubuntu/working-directory/Github-Actions/Github-Actions/
         retention-days: 1
         
-  - name : Checker
-    if : ${{ job.status == 'success' }}
-    run : echo "Previous jobs are success"
+ #  - name : Checker
+ #    if : ${{ job.status == 'success' }}
+ #    run : echo "Previous jobs are success"
         
-  - name : Creating a label
-    id : contents
-    run : |
-          echo "::set-output name=test::vitty"
+ #  - name : Creating a label
+ #    id : contents
+ #    run : |
+ #          echo "::set-output name=test::vitty"
   
- checking-out-value :
+ # checking-out-value :
 
-    runs-on : self-hosted
-    if: ${{ success() }}
-    needs : build-stage
-    steps : 
+ #    runs-on : self-hosted
+ #    if: ${{ success() }}
+ #    needs : build-stage
+ #    steps : 
     
-    - name : Printing values from other Jobs
-      run : |
-            echo ${{ needs.build-stage.outputs.output1 }}
+ #    - name : Printing values from other Jobs
+ #      run : |
+ #            echo ${{ needs.build-stage.outputs.output1 }}
           
- Running-shell :
-  runs-on : self-hosted
-  defaults :
-    run :
-        working-directory : /home/ubuntu/
-        shell : bash
-  steps :
+ # Running-shell :
+ #  runs-on : self-hosted
+ #  defaults :
+ #    run :
+ #        working-directory : /home/ubuntu/
+ #        shell : bash
+ #  steps :
   
-  - name : Running Shell Script
-    run : |
-          sh /home/ubuntu/shelly.sh
-          ls -lrt > output.txt 
+ #  - name : Running Shell Script
+ #    run : |
+ #          sh /home/ubuntu/shelly.sh
+ #          ls -lrt > output.txt 
         
         
         
