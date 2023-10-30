@@ -72,7 +72,7 @@ jobs :
     uses: actions/upload-artifact@v3
     with:
         name: myArtifacts
-        path : /home/ubuntu/working-directory/Github-Actions/Github-Actions/
+        path : .
         retention-days: 1
         
  #  - name : Checker
