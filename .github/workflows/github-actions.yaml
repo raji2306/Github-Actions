@@ -2,19 +2,19 @@ name : Github-Workflow
 run-name : Github-Actions-Flow
 
 on :
-  push :
-    branches :
-    - master 
-    - '!feature'
-  pull_request :
-    types : [opened, reopened]
-    branches :
-    - master 
-    - feature
-  issues :
-    types : [opened, edited, milestoned]
-    branches :
-    - master
+  # push :
+  #   branches :
+  #   - master 
+  #   - '!feature'
+  # pull_request :
+  #   types : [opened, reopened]
+  #   branches :
+  #   - master 
+  #   - feature
+  # issues :
+  #   types : [opened, edited, milestoned]
+  #   branches :
+  #   - master
   workflow_dispatch :
   status :
 #   schedule :
